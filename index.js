@@ -7,14 +7,13 @@ function testFunc() {
 function superbowlWin(recordHash)
 {
   
-  let champsHash = recordHash.find(e => e.result === "W");
-  
-  if (champsHash.typeOf() === undefined) {
-  
+  if (recordHash.find(e => e.result === "W") === undefined) 
+  {
     return undefined 
-    
   }
-    else {
+  
+  let champsHash = recordHash.find(e => e.result === "W");
+
   return champsHash.year  
-    }  
+  
 }
